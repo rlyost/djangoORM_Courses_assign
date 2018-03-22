@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Users</title>
+    {% load static %}
+    <link rel='stylesheet' href="{% static 'css/course.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <h1>Add a new course</h1>
+    <form action='/create' method='POST'>
+        {% csrf_token %}
+        <label for="name">Name:<input type="text" name="name" id="name"></label>
+        <label for="desc">Description:<input type="text" name="desc" id="desc" size=65></label>
+        <input type="submit" value="Add" class='add'>
+    </form>
+    <h1>Courses</h1>
+      <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Date Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for course in courses %}
+            <tr>
+                <td>{{ course.name }}</td>
+                <td>{{ course.desc }}</td>
+                <td>{{ course.created_at }}</td>
+                <td>
+                    <a href="{%url 'udestroy' id=course.id %}" class="options">Remove</a>
+                </td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td class='tbl_bot'></td>
+            <td class='tbl_bot'></td>
+            <td class='tbl_bot'></td>
+            <td class='tbl_bot'></td>
+        </tr>
+    </table>
+</body>
+</html>

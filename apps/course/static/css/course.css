@@ -1,0 +1,67 @@
+table {
+    border: 2px solid black;
+}
+th {
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    /* border-right: 1px solid black; */
+    margin: 0 5px 0 5px;
+    padding: 3px 5px;
+
+}
+td {
+    border-left: 2px solid black;
+    /* border-right: 1px solid black; */
+    margin: 0 5px 0 5px;
+    padding: 3px 5px;
+}
+label {
+    margin: 5px 5px 10px 10px;
+    display: block;
+}
+input {
+    margin: 0px 0px 0px 20px;
+}
+p {
+    margin: 10px 30px;
+}
+a {
+    margin: 25px 15px;
+}
+div {
+    margin: 0 auto;
+    vertical-align: top;
+}
+form {
+    display: inline-block;
+    vertical-align: top;
+}
+.options {
+    margin: 30px 15px;
+}
+.add {
+    color: white;
+    border: 3px solid black;
+    background-color: rgb(36, 138, 36);
+    box-shadow: 3px 3px black;
+    margin: 0 250px;
+}
+.No {
+    color: black;
+    border: 3px solid black;
+    background-color: lightgray;
+    box-shadow: 3px 3px black;
+    margin: 0 100px;
+    display: inline-block;
+    font-size: 14pt;
+}
+.delete {
+    color: white;
+    border: 1px solid black;
+    background-color: red;
+    box-shadow: 3px 3px black;
+    margin: 0 auto;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 14pt;
+}
